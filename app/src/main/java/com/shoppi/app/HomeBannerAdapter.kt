@@ -39,11 +39,10 @@ class HomeBannerAdapter : ListAdapter<Banner, HomeBannerAdapter.HomeBannerViewHo
 
         fun bind(banner: Banner){
             loadImage(banner.backgroundImageUrl,bannerImageView)
-
             bannerBadgeTextView.text = banner.badge.label
             bannerBadgeTextView.background = ColorDrawable(Color.parseColor(banner.badge.backgroundColor))
             bannerTitleTextView.text = banner.label
-            loadImage(banner.productDetail.thumbnailImageUrl,bannerImageView)
+            loadImage(banner.productDetail.thumbnailImageUrl,bannerDetailThumbnailImageView)
             bannerDetailBrandLabelTextView.text = banner.productDetail.brandName
             bannerDetailProductLabelTextView.text = banner.productDetail.label
             bannerDetailDiscountRateTextView.text = "${banner.productDetail.discountRate}%"
