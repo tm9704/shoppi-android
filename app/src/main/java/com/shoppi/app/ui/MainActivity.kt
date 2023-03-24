@@ -1,14 +1,11 @@
-package com.shoppi.app
+package com.shoppi.app.ui
 
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-
-private const val TAG = "MainActivity"
+import com.shoppi.app.R
 
 class MainActivity : AppCompatActivity() {
 
