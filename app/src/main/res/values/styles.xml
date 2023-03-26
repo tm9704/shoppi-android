@@ -4,6 +4,7 @@
     <style name="Circle">
         <item name="cornerSize">50%</item>
     </style>
+
     <!--  Text Style  -->
     <style name="TextHeadLine5.Black02" parent="TextAppearance.MaterialComponents.Headline5">
         <item name="android:textColor">@color/shoppi_black_02</item>
