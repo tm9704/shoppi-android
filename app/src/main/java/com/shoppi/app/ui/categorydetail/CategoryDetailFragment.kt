@@ -30,6 +30,5 @@ class CategoryDetailFragment: Fragment() {
         val categoryId = requireArguments().getString(KEY_CATEGORY_ID)
         val categoryLabel = requireArguments().getString(KEY_CATEGORY_LABEL)
         binding.toolbarCategoryDetail.title = categoryLabel
-
     }
 }
