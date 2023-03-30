@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.shoppi.app.model.Banner
 import com.shoppi.app.databinding.ItemHomeBannerBinding
 
-class HomeBannerAdapter : ListAdapter<Banner, HomeBannerAdapter.HomeBannerViewHolder>(
+class HomeBannerAdapter(private val viewModel: HomeViewModel) : ListAdapter<Banner, HomeBannerAdapter.HomeBannerViewHolder>(
     BannerDiffCallback()
 ) {
     private lateinit var binding: ItemHomeBannerBinding
