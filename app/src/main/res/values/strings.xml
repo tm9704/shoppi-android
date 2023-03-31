@@ -8,7 +8,7 @@
     <!--  Navigation  -->
     <string name="label_category">카테고리</string>
     <string name="label_home_icon">홈</string>
-    <string name="label_cart_icon">장바구니</string>
+    <string name="label_cart">장바구니</string>
 
     <!--  Image description  -->
     <string name="description_appbar_home_icon">홈화면 앱바 아이콘</string>
@@ -16,5 +16,8 @@
     <string name="description_home_banner_thumbnail">홈화면 배너 썸네일</string>
     <string name="description_product_thumbnail">상품 상세 대표 이미지</string>
     <string name="description_product_detail_image">상품 상세 이미지</string>
+    <string name="description_cart_item_thumbnail">장바구니 대표 이미지</string>
+    <string name="description_btn_delete_cart_item">장바구니 아이템 삭제</string>
     <string name="label_category_new">NEW</string>
+    <string name="label_cart_purchase_button">선택한 상품 주문하기</string>
 </resources>
