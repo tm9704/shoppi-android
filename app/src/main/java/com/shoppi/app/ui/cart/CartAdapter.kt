@@ -2,14 +2,12 @@ package com.shoppi.app.ui.cart
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 import com.shoppi.app.databinding.ItemCartSectionBinding
 import com.shoppi.app.databinding.ItemCartSectionHeaderBinding
 import com.shoppi.app.model.CartHeader
 import com.shoppi.app.model.CartItem
 import com.shoppi.app.model.CartProduct
-import retrofit2.http.Header
 
 private const val VIEW_TYPE_HEADER = 0
 private const val VIEW_TYPE_ITEM = 1
@@ -49,6 +47,18 @@ class CartAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun getItemCount(): Int {
         return cartProducts.size
+    }
+
+    fun submitHeaderAndItemList(items: List<CartItem>) {
+        val itemGroups = items.groupBy { it.brandName }
+        val products = mutableListOf<CartProduct>()
+        itemGroups.entries.forEach { entry ->
+            val header = CartHeader(entry.key)
+            products.add(header)
+            products.addAll(entry.value)
+        }
+        cartProducts.addAll(products)
+        notifyItemRangeInserted(cartProducts.size, products.size)
     }
 
     class HeaderViewHolder(private val binding: ItemCartSectionHeaderBinding): RecyclerView.ViewHolder(binding.root) {
